@@ -3,9 +3,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     Homepage
-    </div>
+    <Home>
+      <Nav/>
+      <Header/>
+      <Main/>
+      <Footer/>
+    </Home>
   );
 }
 
