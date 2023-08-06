@@ -1,4 +1,5 @@
-const Footer = 
+export default function Footer() {
+return (
 <footer>
     <img src="./img/logo" alt="logo"></img>
     <div class="doormat">
@@ -24,3 +25,5 @@ const Footer =
         <a href="instagram">Instagram</a>
     </div>
 </footer>
+)
+}
