@@ -1,7 +1,7 @@
 export default function Footer() {
 return (
 <footer>
-    <img src="./img/logo" alt="logo"></img>
+    <img src="./img/logosmall.png" alt="logo"></img>
     <div class="doormat">
         <ul>
             <li><a href="home">Home</a></li>
