@@ -1,11 +1,13 @@
 export default function Header() {
     return (
         <header>
+            <div class="title">
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button role="reserve">Reserve a Table</button>
-            <img src="food" alt="waiter with food"></img>
+            </div>
+            <p>Little Lemon provides healthy, eco-friendly meals and an intimate dining experience. Come on in and let us show you what we have to offer!</p>
+            <button class="reserve-button" role="reserve">Reserve a Table</button>
+            <img src="/img/traysmall.jpg" alt="waiter with food"></img>
         </header>
     )
 }

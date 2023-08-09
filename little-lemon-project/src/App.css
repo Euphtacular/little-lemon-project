@@ -5,6 +5,8 @@
   --peach: #EE9972;
   --beige: #FBDABB;
   --black: #333333;
+  --markazi: 'Markazi Text', serif;
+  --karla: 'Karla', sans-serif
 }
 
 html {
@@ -18,37 +20,187 @@ html {
 
 nav {
   display: flex;
-  padding: 1rem;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 100%;
 }
 
 nav ul {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Karla", sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
 }
 
 nav ul a {
   text-decoration: none;
   color: var(--black);
+  padding: 1rem;
+  width: auto;
 }
 
 header {
+  padding: 0 15%;
   display: grid;
   background-color: var(--green);
-  grid-template-columns: auto;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "a d"
+  "b d"
+  "c d";
+}
+
+header .title {
+  grid-area: a;
+  margin-right:1rem;
+}
+header p {
+  grid-area: b;
+  margin-right: 1rem;
+  font-family: "Karla", sans-serif;
+  color: var(--grey);
+}
+header button {
+  grid-area: c;
+}
+header img {
+  grid-area: d;
+  transform: translateY(75px);
+  border-radius: 10px;
+}
+
+button {
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--yellow);
+  color: var(--black);
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 0px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 64pt;
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+h2 {
+  font-family: "Markzai Text", serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--grey);
 }
 
 main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "a f c" "b b b";
+  padding: 0 15%;
+  margin-bottom: 4rem;
+}
+
+main h2 {
+  color: var(--green);
+  font-family: "Markazi Text", serif;
+  font-size: 48pt;
+}
+
+.main-top {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.main-top h2 {
+  grid-area: a;
+}
+
+.main-top button {
+  grid-area: c;
+}
+.specials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  flex: 1;
+  justify-content: center;
   align-items: center;
-  padding: 2rem;
+  grid-area: b;
+}
+
+.special {
+  background-color: var(--grey);
+  width: 200px;
+  height: 500px;
+  margin: 3rem;
+  border-radius: 10px;
+}
+
+.special img {
+  width: 100%;
+  height: 30%;
+  border-radius: 10px;
+}
+
+main h5 {
+  color: var(--green);
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 18pt;
+}
+
+.price {
+  color: var(--yellow);
+  font-family: "Karla", sans-serif;
+  font-size: 16pt;
 }
 
 footer {
   display: flex;
-  padding: 1rem;
+  flex-direction: column;
+  padding: 0 10%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: var(--grey);
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--black);
+
+}
+
+@media (min-width: 550px) {
+  nav {
+    display: flex;
+    flex-flow: wrap;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+
+@media (min-width: 850px) {
+
 }
