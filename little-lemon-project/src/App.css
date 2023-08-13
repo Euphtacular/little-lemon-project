@@ -185,6 +185,11 @@ footer a {
 
 }
 
+form {
+  display: grid;
+  max-width: 200px;
+  gap: 20px}
+
 @media (min-width: 550px) {
   nav {
     display: flex;
